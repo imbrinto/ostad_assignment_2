@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:ostad_assignment_2/widgets/button.dart';
+import 'package:ostad_assignment_2/widgets/snack_bar.dart';
 
 class NavigationBarHome extends StatefulWidget {
   final String buttonText;
   BuildContext context;
-  NavigationBarHome({super.key,required this.buttonText, required this.context});
+  NavigationBarHome({super.key,required this.buttonText, required this.context,});
 
   @override
   State<NavigationBarHome> createState() => _NavigationBarHomeState();
@@ -33,7 +34,7 @@ class _NavigationBarHomeState extends State<NavigationBarHome> {
             ],
           ),
           Spacer(),
-          Button(buttonText: widget.buttonText, context: context)
+          Button(buttonText: widget.buttonText, context: context,)
         ],
       ),
     );

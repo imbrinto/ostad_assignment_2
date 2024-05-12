@@ -1,10 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ostad_assignment_2/theme/app_image.dart';
-import 'package:ostad_assignment_2/widgets/button.dart';
 import 'package:ostad_assignment_2/widgets/image_container.dart';
 import 'package:ostad_assignment_2/widgets/navigation_bar.dart';
-import 'package:ostad_assignment_2/widgets/product_container.dart';
 import 'package:ostad_assignment_2/widgets/product_details.dart';
 
 
@@ -50,7 +48,7 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 ImageContainer(photoLink: AppImage.img1),
-                const ProductDetails(productName: 'Pullover', productColor: 'Black', productSize: 'L'),
+                const ProductDetails(productName: 'Pullover', productColor: 'Black', productSize: 'L',productPrice: 51,),
                 const Spacer(),
                 const Padding(
                   padding: EdgeInsets.all(10.0),
@@ -90,7 +88,7 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 ImageContainer(photoLink: AppImage.img2),
-                const ProductDetails(productName: 'T-Shirt', productColor: 'Grey', productSize: 'L'),
+                const ProductDetails(productName: 'T-Shirt', productColor: 'Grey', productSize: 'L',productPrice: 30,),
                 const Spacer(),
                 const Padding(
                   padding: EdgeInsets.all(10.0),
@@ -130,7 +128,7 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 ImageContainer(photoLink: AppImage.img3),
-                const ProductDetails(productName: 'Short Dress', productColor: 'Black', productSize: 'M'),
+                const ProductDetails(productName: 'Short Dress', productColor: 'Black', productSize: 'M', productPrice: 43,),
                 const Spacer(),
                 const Padding(
                   padding: EdgeInsets.all(10.0),
@@ -153,7 +151,7 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: NavigationBarHome(buttonText: 'CHECK OUT', context: context)
+      bottomNavigationBar: NavigationBarHome(buttonText: 'CHECK OUT', context: context,)
     );
   }
 }
