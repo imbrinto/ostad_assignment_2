@@ -5,6 +5,6 @@ class AppTheme{
     scaffoldBackgroundColor: Colors.grey.shade300,
     appBarTheme: AppBarTheme(
       color: Colors.grey.shade300
-    )
+    ),
   );
 }
