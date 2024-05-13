@@ -30,7 +30,7 @@ class _ButtonState extends State<AlertBoxButton> {
               fontSize: 13,
               fontWeight: FontWeight.w400,
               color: Colors.white,
-              fontFamily: 'Metropolis'
+              fontFamily: 'Inter'
           ),
         ),
       ),

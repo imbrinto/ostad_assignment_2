@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ostad_assignment_2/widgets/button.dart';
-import 'package:ostad_assignment_2/widgets/snack_bar.dart';
 
 class NavigationBarHome extends StatefulWidget {
   final String buttonText;
@@ -19,7 +18,7 @@ class _NavigationBarHomeState extends State<NavigationBarHome> {
       color: Colors.grey.shade200,
       child: Column(
         children: [
-          Row(
+          const Row(
             children: [
               Text('Total amount:',style: TextStyle(
                 fontFamily: 'Metropolis',
@@ -33,7 +32,7 @@ class _NavigationBarHomeState extends State<NavigationBarHome> {
               ),)
             ],
           ),
-          Spacer(),
+          const Spacer(),
           Button(buttonText: widget.buttonText, context: context,)
         ],
       ),

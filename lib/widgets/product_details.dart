@@ -2,22 +2,19 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:ostad_assignment_2/widgets/alert_box.dart';
-import 'package:ostad_assignment_2/widgets/alert_box_button.dart';
-import 'package:ostad_assignment_2/widgets/button.dart';
-import 'package:ostad_assignment_2/widgets/snack_bar.dart';
 
 class ProductDetails extends StatefulWidget {
   final String productName;
   final String productColor;
   final String productSize;
   final int productPrice;
-  const ProductDetails({
-    super.key,
-    required this.productName,
-    required this.productColor,
-    required this.productSize,
-    required this.productPrice
-  });
+
+  const ProductDetails(
+      {super.key,
+      required this.productName,
+      required this.productColor,
+      required this.productSize,
+      required this.productPrice});
 
   @override
   State<ProductDetails> createState() => _ProductDetailsState();
@@ -26,20 +23,20 @@ class ProductDetails extends StatefulWidget {
 class _ProductDetailsState extends State<ProductDetails> {
   int itemNumber = 0;
 
-  void increment(){
-
+  void increment() {
     setState(() {
-      if(itemNumber+1 == 5){
+      if (itemNumber + 1 == 5) {
         showDialog(
             context: context,
-            builder: (BuildContext context){
-              return AlertBox(buttonText: 'Okay', context: context);
-        });
+            builder: (BuildContext context) {
+              return AlertBox(buttonText: 'Okay', context: context, );
+            });
       }
       itemNumber++;
     });
   }
-  void decrement(){
+
+  void decrement() {
     setState(() {
       if (itemNumber > 0) {
         itemNumber--;
@@ -49,8 +46,7 @@ class _ProductDetailsState extends State<ProductDetails> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start, children: [
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       Container(
         padding: const EdgeInsets.fromLTRB(10, 10, 2, 0),
         child: Text(
@@ -75,7 +71,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                     style: const TextStyle(
                       color: Colors.black,
                     ) //fontWeight: FontWeight.w500),
-                ),
+                    ),
                 const TextSpan(
                   text: 'Size: ',
                   style: TextStyle(
@@ -87,7 +83,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                     style: const TextStyle(
                       color: Colors.black,
                     ) //fontWeight: FontWeight.bold),
-                ),
+                    ),
               ],
             ),
           )),
@@ -99,7 +95,7 @@ class _ProductDetailsState extends State<ProductDetails> {
         child: Row(
           children: [
             GestureDetector(
-              onTap: (){
+              onTap: () {
                 decrement();
               },
               child: Container(
@@ -145,15 +141,9 @@ class _ProductDetailsState extends State<ProductDetails> {
                 ),
               ),
             ),
-             // const Spacer(),
-            // Text('d')
           ],
         ),
       )
     ]);
   }
 }
-
-
-
-
